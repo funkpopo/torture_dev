@@ -1,4 +1,4 @@
-# GitLab Commit Logger
+# Torture Dev
 
 这个工具用于获取GitLab上所有项目在当天（或指定天数内）的提交记录，并将其保存为JSON或TXT文件以供后续LLM分析。同时提供API接口，方便集成到n8n等自动化工作流中。
 

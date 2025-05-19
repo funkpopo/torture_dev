@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  gitlab-commits-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: gitlab-commits-api:latest
+    container_name: gitlab-commits-api
+    ports:
+      - "8000:8000"
+    environment:
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+    restart: unless-stopped
+    volumes:
+      # 挂载配置文件（可选）
+      # - ./config:/app/config
+      # 如果需要持久化保存输出文件，可以挂载以下目录
+      - ./output:/app/output 
